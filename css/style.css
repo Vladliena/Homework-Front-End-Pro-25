@@ -1,0 +1,43 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#shop {
+  display: flex;
+}
+#shop .shop_categories {
+  background-color: grey;
+  padding: 20px;
+  display: block;
+  position: relative;
+  margin-right: 30px;
+}
+#shop .shop_categories li {
+  margin-bottom: 30px;
+}
+#shop .shop_categories li a {
+  text-decoration: none;
+  color: #f1eded;
+}
+#shop .shoes_variation, #shop .accessoriesVariation, #shop .faceBodyVariation {
+  background-color: cadetblue;
+  padding: 20px;
+  margin-right: 30px;
+}
+#shop .shoes_variation li, #shop .accessoriesVariation li, #shop .faceBodyVariation li {
+  margin-bottom: 30px;
+}
+#shop .shoes_variation li a, #shop .accessoriesVariation li a, #shop .faceBodyVariation li a {
+  text-decoration: none;
+  color: #f1eded;
+}
+
+.buyProductButton {
+  width: 100px;
+  height: 50px;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
