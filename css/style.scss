@@ -4,34 +4,25 @@
   margin: 0;
 }
 
-#shop{
+#shop {
   display: flex;
-  .shop_categories {
-    background-color: grey;
-    padding: 20px;
-    display: block;
-    position: relative;
-    margin-right: 30px;
-    li {
-      margin-bottom: 30px;
-      a{
-        text-decoration: none;
-        color: #f1eded;
-      }
-    }
-  }
-  .shoes_variation, .accessoriesVariation, .faceBodyVariation{
-    background-color: cadetblue;
-    padding: 20px;
-    margin-right: 30px;
-    li {
-      margin-bottom: 30px;
-      a{
-        text-decoration: none;
-        color: #f1eded;
-      }
-    }
-  }
+}
+
+.categories{
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.iphone_description,.galaxy_description,.bose_description,.marshall_description,.macbook_description,.acer_description{
+  max-width: 200px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: red;
+}
+.phonesName,.laptopsName,.speakersName{
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: blue;
 }
 
 .buyProductButton{
