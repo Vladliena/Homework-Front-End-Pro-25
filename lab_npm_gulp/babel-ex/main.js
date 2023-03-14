@@ -92,10 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
             buyButton.appendChild(document.createTextNode('Buy'));
             buyButton.className = 'buyProductButton';
             buyButton.addEventListener('click',function (){
-                    if(alert('Thank you for your purchase!')){
-                    } else {
-                        window.location.reload();
-                    }
+                if(alert('Thank you for your purchase!')){
+                } else {
+                    window.location.reload();
+                }
             });
             if (element.innerHTML === 'Phones') {
                 for (const i of arr) {
@@ -129,89 +129,89 @@ document.addEventListener("DOMContentLoaded", function () {
                                 shop.appendChild(phoneDescriptionUl)
                                 phoneDescriptionUl.appendChild(buyButton)
                             })
-                            }
-                            while (shop.children[1]) shop.children[1].remove()
-                            shop.appendChild(phonesUl)
                         }
+                        while (shop.children[1]) shop.children[1].remove()
+                        shop.appendChild(phonesUl)
                     }
                 }
+            }
             else
-                if (element.innerHTML === 'Laptops') {
-                    for (const i of arr) {
-                        if (i.title === 'Laptops') {
-                            const laptopsUl = document.createElement('ul');
-                            const items = i.items;
-                            for (const g of items) {
-                                const laptopsName = document.createElement('li');
-                                laptopsName.innerHTML += g.title;
-                                laptopsName.classList.add('laptopsName');
-                                laptopsUl.appendChild(laptopsName);
-                                laptopsName.addEventListener('click', () => {
-                                    const laptopDescriptionUl = document.createElement('ul');
-                                    if (laptopsName.innerHTML === 'Acer') {
-                                        for (let i = 0; i < g.items.length; i++) {
-                                            const acerCard = document.createElement('li');
-                                            acerCard.innerHTML += Object.values(g.items[i]).toString()
-                                            acerCard.classList.add('acer_description');
-                                            laptopDescriptionUl.appendChild(acerCard);
-                                        }
+            if (element.innerHTML === 'Laptops') {
+                for (const i of arr) {
+                    if (i.title === 'Laptops') {
+                        const laptopsUl = document.createElement('ul');
+                        const items = i.items;
+                        for (const g of items) {
+                            const laptopsName = document.createElement('li');
+                            laptopsName.innerHTML += g.title;
+                            laptopsName.classList.add('laptopsName');
+                            laptopsUl.appendChild(laptopsName);
+                            laptopsName.addEventListener('click', () => {
+                                const laptopDescriptionUl = document.createElement('ul');
+                                if (laptopsName.innerHTML === 'Acer') {
+                                    for (let i = 0; i < g.items.length; i++) {
+                                        const acerCard = document.createElement('li');
+                                        acerCard.innerHTML += Object.values(g.items[i]).toString()
+                                        acerCard.classList.add('acer_description');
+                                        laptopDescriptionUl.appendChild(acerCard);
                                     }
-                                    else if (laptopsName.innerHTML === 'Macbook'){
-                                        for (let i = 0; i < g.items.length; i++) {
-                                            const macbookCard = document.createElement('li');
-                                            macbookCard.innerHTML += Object.values(g.items[i]).toString()
-                                            macbookCard.classList.add('macbook_description');
-                                            laptopDescriptionUl.appendChild(macbookCard);
-                                        }
+                                }
+                                else if (laptopsName.innerHTML === 'Macbook'){
+                                    for (let i = 0; i < g.items.length; i++) {
+                                        const macbookCard = document.createElement('li');
+                                        macbookCard.innerHTML += Object.values(g.items[i]).toString()
+                                        macbookCard.classList.add('macbook_description');
+                                        laptopDescriptionUl.appendChild(macbookCard);
                                     }
-                                    while (shop.children[2]) shop.children[2].remove()
-                                    shop.appendChild(laptopDescriptionUl)
-                                    laptopDescriptionUl.appendChild(buyButton)
-                                })
-                            }
-                            while (shop.children[1]) shop.children[1].remove()
-                            shop.appendChild(laptopsUl)
+                                }
+                                while (shop.children[2]) shop.children[2].remove()
+                                shop.appendChild(laptopDescriptionUl)
+                                laptopDescriptionUl.appendChild(buyButton)
+                            })
                         }
-                    }
-                } else if (element.innerHTML === 'Speakers') {
-                    for (const i of arr) {
-                        if (i.title === 'Speakers') {
-                            const SpeakersUl = document.createElement('ul');
-                            const items = i.items;
-                            for (const g of items) {
-                                const speakersName = document.createElement('li');
-                                speakersName.innerHTML += g.title;
-                                speakersName.classList.add('speakersName');
-                                SpeakersUl.appendChild(speakersName);
-                                speakersName.addEventListener('click', () => {
-                                    const speakerDescriptionUl = document.createElement('ul');
-                                    if (speakersName.innerHTML === 'Marshall') {
-                                        for (let i = 0; i < g.items.length; i++) {
-                                            const marshallCard = document.createElement('li');
-                                            marshallCard.innerHTML += Object.values(g.items[i]).toString()
-                                            marshallCard.classList.add('marshall_description');
-                                            speakerDescriptionUl.appendChild(marshallCard);
-                                        }
-                                    }
-                                    else if (speakersName.innerHTML === 'Bose'){
-                                        for (let i = 0; i < g.items.length; i++) {
-                                            const boseCard = document.createElement('li');
-                                            boseCard.innerHTML += Object.values(g.items[i]).toString()
-                                            boseCard.classList.add('bose_description');
-                                            speakerDescriptionUl.appendChild(boseCard);
-                                        }
-                                    }
-                                    while (shop.children[2]) shop.children[2].remove()
-                                    shop.appendChild(speakerDescriptionUl)
-                                    speakerDescriptionUl.appendChild(buyButton)
-                                })
-                            }
-                            while (shop.children[1]) shop.children[1].remove()
-                            shop.appendChild(SpeakersUl)
-                        }
+                        while (shop.children[1]) shop.children[1].remove()
+                        shop.appendChild(laptopsUl)
                     }
                 }
-            });
+            } else if (element.innerHTML === 'Speakers') {
+                for (const i of arr) {
+                    if (i.title === 'Speakers') {
+                        const SpeakersUl = document.createElement('ul');
+                        const items = i.items;
+                        for (const g of items) {
+                            const speakersName = document.createElement('li');
+                            speakersName.innerHTML += g.title;
+                            speakersName.classList.add('speakersName');
+                            SpeakersUl.appendChild(speakersName);
+                            speakersName.addEventListener('click', () => {
+                                const speakerDescriptionUl = document.createElement('ul');
+                                if (speakersName.innerHTML === 'Marshall') {
+                                    for (let i = 0; i < g.items.length; i++) {
+                                        const marshallCard = document.createElement('li');
+                                        marshallCard.innerHTML += Object.values(g.items[i]).toString()
+                                        marshallCard.classList.add('marshall_description');
+                                        speakerDescriptionUl.appendChild(marshallCard);
+                                    }
+                                }
+                                else if (speakersName.innerHTML === 'Bose'){
+                                    for (let i = 0; i < g.items.length; i++) {
+                                        const boseCard = document.createElement('li');
+                                        boseCard.innerHTML += Object.values(g.items[i]).toString()
+                                        boseCard.classList.add('bose_description');
+                                        speakerDescriptionUl.appendChild(boseCard);
+                                    }
+                                }
+                                while (shop.children[2]) shop.children[2].remove()
+                                shop.appendChild(speakerDescriptionUl)
+                                speakerDescriptionUl.appendChild(buyButton)
+                            })
+                        }
+                        while (shop.children[1]) shop.children[1].remove()
+                        shop.appendChild(SpeakersUl)
+                    }
+                }
+            }
         });
-    })
-    categories(arr)
+    });
+})
+categories(arr)

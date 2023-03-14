@@ -1,0 +1,33 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#shop {
+  display: flex;
+}
+
+.categories {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.iphone_description, .galaxy_description, .bose_description, .marshall_description, .macbook_description, .acer_description {
+  max-width: 200px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: red;
+}
+
+.phonesName, .laptopsName, .speakersName {
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: blue;
+}
+
+.buyProductButton {
+  width: 100px;
+  height: 50px;
+  margin-top: 30px;
+}
